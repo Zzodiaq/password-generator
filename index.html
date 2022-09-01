@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="slider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>password generator</title>
 </head>
 <body>
@@ -20,11 +22,11 @@
             <section class="container-1">
                 <section class="charLen">
                     <p class="tit2">Character Length</p>
-                    <p class="length">0</p>
+                    <p id="length">0</p>
                 </section>
     
                 <section class="lenSelector">
-                    <input type="range" min="0" max="20" value="0" class="slider" id="myRange">
+                    <input  type="range" min="0" max="20" value="0" class="slider styled-slider slider-progress" id="myRange">
                 </section>
     
                 <section class="checkbox">

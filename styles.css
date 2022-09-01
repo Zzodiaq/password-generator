@@ -69,47 +69,9 @@ margin: 20px 20px;
     color: green;
 }
 
-.length{
+#length{
     font-size: 25px;
 }
 
-#myRange{
-    width: 100%;
-}
 
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: black;
-    outline: none;
-    opacity: 1;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
-  
-    input[type="range"]:hover::-webkit-slider-thumb {
-    background: black;
-    border: solid;
-    border-width: 2px;
-    border-color: #04AA6D;
-  }
 
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: white;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #04AA6D;
-    cursor: pointer;
-  }
