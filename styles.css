@@ -22,6 +22,7 @@ h1 {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    border-radius: 20px;
 }
 
 .allMid{
@@ -34,10 +35,11 @@ h1 {
 
 .generator{
     width: 400px;
-    height: 450px;
+    height: 430px;
     background-color: #383838;
     display: flex;
     flex-flow: column wrap;
+    border-radius: 20px;
 }
 
 .password{
@@ -49,6 +51,16 @@ h1 {
 .icone{
     margin-right: 20px;
 }  
+
+.btn-1{
+  border: none;
+  background-color: #383838;
+}
+
+.btn-1:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 
 .tit2{
     color: white;
@@ -73,5 +85,145 @@ margin: 20px 20px;
     font-size: 25px;
 }
 
+.lenSelector{
+    margin: 15px 0 25px 0;
+}
+
+label{
+    color: white;
+}
 
 
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #383838;
+    border: solid 1px;
+    border-color: white;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: black;
+    border-color: green;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: green;
+    border-color: green;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+  .include{
+    display: flex;
+    flex-flow: row wrap;
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .strength{
+    background-color: black;
+    width: 100%;
+    height: 55px;
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    color: #A2B5BB;
+    justify-content: space-between;
+  }
+
+  .generate{
+    background-color: green;
+    width: 100%;
+    height: 55px;
+    margin-top: 30px;
+  }
+
+  .strenLevel{
+    height: 22px;
+    width: 8px;
+    border: solid 1px;
+    border-color: white;
+    margin-right: 5px;
+  }
+
+  .force{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 12px;
+
+  }
+
+  .level{
+    display: flex;
+    flex-flow: row wrap;
+   align-items: center;
+   margin-right: 20px;
+  }
+
+  .btn-2{
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border: none;
+  }
+
+  .btn-2:hover{
+    background:  rgb(255, 255, 255); opacity: 0.5;
+    cursor: pointer;
+  }
+ 
