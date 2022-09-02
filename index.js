@@ -20,4 +20,32 @@ const numbers = ["0","1","2","3","4","5","6","7","8","9"];
 const symbols = ["&", "#", "{", "[" , "|", "'", "_", "-", "$", "*", "%", "§", "/", ":", "!", "?"];
 const password = [];
 
-const lenValue = slider.value;
+const geneBtn = $(".btn-2");
+
+
+let i = 0;
+
+
+geneBtn.on("click", function(){
+  
+
+  if($("#check-1").is(":checked")){
+    const lenValue = slider.value;
+    while(i < lenValue){
+      const randomUpperNumber = Math.floor(Math.random() * (26 - 0) + 0);
+      password.push(uppercase[randomUpperNumber]);
+      i++;
+    }} else if($("#check-2").is(":checked")){
+      const lenValue = slider.value;
+      while(i < lenValue){
+        const randomLowerNumber = Math.floor(Math.random() * (26 - 0) + 0);
+        password.push(lowercase[randomLowerNumber]);
+        i++;
+    }
+    }
+    console.log(password);
+
+  
+
+})
+
