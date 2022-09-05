@@ -1,6 +1,7 @@
 const slider = document.getElementById("myRange");
 const charLen = document.getElementById("length");
 
+
 charLen.innerHTML = slider.value;
  
 slider.oninput = function(){
@@ -23,51 +24,86 @@ let password = [];
 const geneBtn = $(".btn-2");
 
 
-
-
-
-geneBtn.on("click", function(){
+$(".checked").on("change", function(){
   
+  geneBtn.on("click", function(){
+  password = [];
+  if($("#check-1").is(":checked")){
+    if($("#check-1").is(":checked") && $("#check-2").is(":checked")){
+      
+      const lenValue = slider.value;
+      const lendiv = lenValue / 2;
+      let i = 0;
+      let j = 0;
+      while(i < lendiv){
+      const randomUpperNumber = Math.floor(Math.random() * (26 - 0) + 0);
+      password.push(uppercase[randomUpperNumber]);
+      console.log(password)
+      i++;
 
-  generator();
-  $(".password").html();
-  
+      while(j < lendiv){
+        const randomLowerNumber = Math.floor(Math.random() * (26 - 0) + 0);
+        password.push(lowercase[randomLowerNumber]);
+        console.log(password)
+        j++;
+        }
+    }
+ 
+  }
+      const lenValue = slider.value;
+      let i = 0;
+      while(i < lenValue){
+      const randomUpperNumber = Math.floor(Math.random() * (26 - 0) + 0);
+      password.push(uppercase[randomUpperNumber]);
+      i++;
+      }
+       
+      
+    }   else if($("#check-2").is(":checked")){
+      const lenValue = slider.value;
+      let i = 0;
+      while(i < lenValue){
+        const randomLowerNumber = Math.floor(Math.random() * (26 - 0) + 0);
+        password.push(lowercase[randomLowerNumber]);
+        i++;
+    }
+    }else if($("#check-3").is(":checked")){
+      const lenValue = slider.value;
+      let i = 0;
+      while(i < lenValue){
+        const randomNumber = Math.floor(Math.random() * (10 - 0) + 0);
+        password.push(numbers[randomNumber]);
+        i++;
+    }
+    }else if($("#check-4").is(":checked")){
+      const lenValue = slider.value;
+      let i = 0;
+      while(i < lenValue){
+        const randomSymbols = Math.floor(Math.random() * (16 - 0) + 0);
+        password.push(symbols[randomSymbols]);
+        i++;
+    }
+    }
+    
+    else if($("#check-1").not(":checked")){
 
+      return false;
+    }
+   const paslice = password.slice(0, slider.value);
+    const join = paslice.join("");
+      console.log(join);
+      $("#password").html(join);
+      $("#password").addClass("password");
+    })
 })
 
 
 
-function generator(){
   
-  password = [];
-    if($("#check-1").is(":checked")){
-      const lenValue = slider.value;
-      let i = 0;
-      while(i < lenValue){
-        const randomUpperNumber = Math.floor(Math.random() * (26 - 0) + 0);
-        password.push(uppercase[randomUpperNumber]);
-        i++;
-        }
-        
-        
-      } else if($("#check-1").not(":checked")){
   
-        return false;
-      }
+   
+       
       
       
-      else if($("#check-2").is(":checked")){
-        const lenValue = slider.value;
-        while(i < lenValue){
-          const randomLowerNumber = Math.floor(Math.random() * (26 - 0) + 0);
-          password.push(lowercase[randomLowerNumber]);
-          i++;
-      }
-      }
-      const join = password.join("");
       
-      console.log(join);
 
-      
-  
-}

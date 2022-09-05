@@ -42,10 +42,16 @@ h1 {
     border-radius: 20px;
 }
 
-.password{
+.passw{
     margin-left: 20px;
     font-size: 25px;
     color: #A2B5BB;
+}
+
+.password{
+  
+  font-size: 20px;
+  color: white;
 }
 
 .icone{
