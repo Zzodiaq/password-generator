@@ -206,6 +206,15 @@ label{
     margin-right: 5px;
   }
 
+  .stren {
+    background-color: orange;
+  }
+
+  .secu{
+    margin-right: 10px;
+    color: white;
+  }
+
   .force{
     display: flex;
     align-items: center;
@@ -233,3 +242,19 @@ label{
     cursor: pointer;
   }
  
+  .copied{
+    color: white;
+    text-indent: 100%;
+    overflow: hidden;
+  }
+
+  #copiied{
+    
+    color: white;
+  }
+
+  .right{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }

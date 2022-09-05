@@ -15,7 +15,11 @@
 
         <section class="pass">
             <p class="passw" id="password">P4$5WorD!</p>  
-            <button class="btn-1"><img class="icone" src="images/icons8-copy-24.png" alt="error"></button>
+            <div class="right">
+            <p class="copied" id="copiied" >copied</p>
+            <button class="btn-1" onclick="copyToClipboard('#password')"><img class="icone" src="images/icons8-copy-24.png" alt="error"></button>
+            </div>
+            
         </section>
 
         <section class="generator">
@@ -68,10 +72,11 @@
                 <section class="strength">
                     <p class="force">STRENGTH</p>
                     <div class="level">
-                        <div class="strenLevel"></div>
-                        <div class="strenLevel"></div>
-                        <div class="strenLevel"></div>
-                        <div class="strenLevel"></div>
+                        <p class="secu"></p>
+                        <div id="stren1" class="strenLevel"></div>
+                        <div id="stren2" class="strenLevel"></div>
+                        <div id="stren3" class="strenLevel"></div>
+                        <div id="stren4" class="strenLevel"></div>
                     </div>
                     
                 </section>
